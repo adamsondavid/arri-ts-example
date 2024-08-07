@@ -10,7 +10,7 @@
     "check:format": "prettier --ignore-path .gitignore --check .",
     "check:lint": "eslint --ext .vue,.ts --ignore-path .gitignore .",
     "test:e2e": "cypress run --browser chrome",
-    "build": "arri build && vite build && esbuild src/main.prod.netlify.ts --bundle --sourcemap --format=esm --outfile=netlify/edge-functions/index.js"
+    "build": "arri build && vite build"
   },
   "engines": {
     "node": "20.x"
