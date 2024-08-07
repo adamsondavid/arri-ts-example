@@ -10,7 +10,7 @@
     "check:format": "prettier --ignore-path .gitignore --check .",
     "check:lint": "eslint --ext .vue,.ts --ignore-path .gitignore .",
     "test:e2e": "cypress run --browser chrome",
-    "build": "arri build && vite build"
+    "build": "arri build && vite build && esbuild src/main.prod.netlify.ts --bundle --sourcemap --outfile=netlify/edge-functions/index.js"
   },
   "engines": {
     "node": "20.x"
@@ -26,6 +26,7 @@
     "arri": "^0.58.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "esbuild": "^0.23.0",
     "h3": "^1.12.0",
     "radix-vue": "^1.9.2",
     "tailwind-merge": "^2.4.0",

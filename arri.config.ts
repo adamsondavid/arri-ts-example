@@ -1,8 +1,7 @@
 import { defineConfig, generators } from "arri";
 
 export default defineConfig({
-  srcDir: "src/server",
-  entry: "main.ts",
+  entry: "main.dev.ts",
   port: 5174,
   generators: [
     generators.typescriptClient({
