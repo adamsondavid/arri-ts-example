@@ -29,8 +29,8 @@ const loading = ref(false);
 watch(name, async (name) => {
   try {
     loading.value = true;
-    const { body } = await server.greet({ params: { name: names[name % names.length] } });
-    greeting.value = body;
+    const { message } = await server.greet({ name: names[name % names.length] });
+    greeting.value = message;
   } catch (_) {
     greeting.value = "some unexpected error occurred 😰";
   } finally {

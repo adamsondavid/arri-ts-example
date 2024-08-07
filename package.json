@@ -5,28 +5,33 @@
   "author": "David Adamson",
   "type": "commonjs",
   "scripts": {
-    "dev": "concurrently --kill-others \"vite\" \"tsx watch --ignore 'vite.config.ts.timestamp-*.mjs' --ignore 'src/client/**/*' src/main.dev.ts\"",
+    "dev": "concurrently --kill-others \"vite\" \"arri dev\"",
     "check:types": "vue-tsc --noEmit",
     "check:format": "prettier --ignore-path .gitignore --check .",
     "check:lint": "eslint --ext .vue,.ts --ignore-path .gitignore .",
     "test:e2e": "cypress run --browser chrome",
-    "build:netlify": "vite build && esbuild src/main.prod.netlify.ts --bundle --sourcemap --platform=neutral --outfile=netlify/edge-functions/index.js"
+    "build": "arri build && vite build"
   },
   "engines": {
     "node": "20.x"
   },
   "dependencies": {
+    "@arrirpc/client": "^0.58.1",
+    "@arrirpc/schema": "^0.58.1",
+    "@arrirpc/server": "^0.58.1",
     "@fontsource-variable/inter": "^5.0.20",
     "@fontsource-variable/jetbrains-mono": "^5.0.21",
     "@iconify-icons/uil": "^1.2.3",
     "@iconify/vue": "^4.1.2",
+    "arri": "^0.58.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "radix-vue": "^1.9.2",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.35",
-    "vue-router": "^4.4.2"
+    "vue-router": "^4.4.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20.14.13",

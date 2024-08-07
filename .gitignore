@@ -30,3 +30,7 @@ coverage
 
 netlify
 functions
+
+.arri
+.output
+*.g.ts
