@@ -28,9 +28,6 @@ coverage
 *.sln
 *.sw?
 
-netlify
-functions
-
 .arri
 .output
 *.g.ts
