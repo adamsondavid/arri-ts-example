@@ -44,11 +44,11 @@ watch(name, async (name) => {
     <div class="flex flex-col gap-6 w-10/12 sm:w-8/12 2xl:w-6/12 py-6">
       <div class="text-3xl lg:text-6xl font-bold">
         <h1 class="inline-block bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent">
-          Tap Water.
+          arri-ts-example
         </h1>
-        <p>Build fullstack Vue apps with e2e typesafety and DX in mind. Deploy to the cloud within seconds 🚀</p>
+        <p>A simple example on how to use Arri RPC (ts server, ts + vue client). Based on the tapw template.</p>
       </div>
-      <div class="flex gap-2 flex-col sm:flex-row">
+      <div>
         <Button @click="name++" :disabled="loading" data-cy="submit">
           <span v-if="loading" class="flex justify-center">
             <Icon :icon="spinnerIcon" width="20" class="animate-spin" />
@@ -56,8 +56,20 @@ watch(name, async (name) => {
           <span v-else-if="greeting" class="font-mono" data-cy="greeting">{{ greeting }}</span>
           <span v-else>Demonstrate Typesafe Backendcall</span>
         </Button>
+      </div>
+      <div class="flex gap-2 flex-col sm:flex-row">
+        <Button variant="secondary" as="a" href="https://github.com/adamsondavid/arri-ts-example" target="_blank">
+          Source Code on
+          <Icon :icon="githubIcon" width="20" class="inline align-text-bottom" />
+          <span class="font-bold">GitHub</span>
+        </Button>
+        <Button variant="secondary" as="a" href="https://github.com/modiimedia/arri" target="_blank">
+          Arri on
+          <Icon :icon="githubIcon" width="20" class="inline align-text-bottom" />
+          <span class="font-bold">GitHub</span>
+        </Button>
         <Button variant="secondary" as="a" href="https://github.com/adamsondavid/tapw" target="_blank">
-          Use this Template on
+          Tapwater on
           <Icon :icon="githubIcon" width="20" class="inline align-text-bottom" />
           <span class="font-bold">GitHub</span>
         </Button>
